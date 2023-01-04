@@ -61,3 +61,15 @@ def register():
         "message": 'User added on ${}'.format(res),
         "user": str(obj)
     })
+
+
+#Get all users from DB
+@app.route('/api/users', methods=['GET'])
+def get_users():
+    response = []
+    for i in users.find():
+        response.append(i)
+        
+    #return json.dumps(response, default=json_util.default)
+    return jsonify(str(response))
+

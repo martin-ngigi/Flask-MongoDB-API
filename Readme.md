@@ -49,3 +49,9 @@
                 "message": "User added on $<pymongo.results.InsertOneResult object at 0x000001B3A336A800>",
                 "user": "{'first_name': 'Simon', 'last_name': 'Kimani', 'age': 13, 'role': 'IT', 'games': 'Coding', 'contacts': '078763', '_id': ObjectId('63b548d349324c190a97e884')}"
             }
+
+2. GET -> Get all users
+- endpoint -> http://127.0.0.1:5000/api/users
+- response:
+
+            "[{'_id': ObjectId('63b51705cd441e946a5b0a40'), 'first_name': 'Martin', 'last_name': 'Ngigi', 'age': 23, 'role': 'IT', 'games': 'Coding', 'contacts': '078763'}, {'_id': ObjectId('63b548a3c8687b97249a95d6'), 'first_name': 'Simon', 'last_name': 'Kimani', 'age': 13, 'role': 'IT', 'games': 'Coding', 'contacts': '078763'}]"
