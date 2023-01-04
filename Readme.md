@@ -55,3 +55,10 @@
 - response:
 
             "[{'_id': ObjectId('63b51705cd441e946a5b0a40'), 'first_name': 'Martin', 'last_name': 'Ngigi', 'age': 23, 'role': 'IT', 'games': 'Coding', 'contacts': '078763'}, {'_id': ObjectId('63b548a3c8687b97249a95d6'), 'first_name': 'Simon', 'last_name': 'Kimani', 'age': 13, 'role': 'IT', 'games': 'Coding', 'contacts': '078763'}]"
+
+3. GET User by name
+- endpoint -> http://127.0.0.1:5000//api/user/Simon
+- NB - Case Sensitive 
+- response :
+
+            "{'_id': ObjectId('63b548a3c8687b97249a95d6'), 'first_name': 'Simon', 'last_name': 'Kimani', 'age': 13, 'role': 'IT', 'games': 'Coding', 'contacts': '078763'}"

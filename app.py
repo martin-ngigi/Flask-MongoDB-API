@@ -73,3 +73,11 @@ def get_users():
     #return json.dumps(response, default=json_util.default)
     return jsonify(str(response))
 
+#GET unique user
+@app.route('/api/user/<first_name>', methods=["GET"])
+def get_user(first_name):
+    
+    response = users.find_one({"first_name":first_name})
+
+    #return json.dumps(response, default=json_util.default)
+    return jsonify(str(response))
