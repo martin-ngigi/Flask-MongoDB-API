@@ -81,3 +81,18 @@ def get_user(first_name):
 
     #return json.dumps(response, default=json_util.default)
     return jsonify(str(response))
+
+#Update user
+@app.route('/api/update/<first_name>', methods=["PUT"])
+def update(first_name):
+
+    data = request.get_json()
+    
+    query = {"first_name": first_name}
+    
+    users.update_one(query, {"$set": data}) 
+
+    return jsonify({
+        "message": "{} updated successfully!".format(first_name),
+        "user": data
+    })

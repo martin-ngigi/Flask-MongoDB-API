@@ -62,3 +62,29 @@
 - response :
 
             "{'_id': ObjectId('63b548a3c8687b97249a95d6'), 'first_name': 'Simon', 'last_name': 'Kimani', 'age': 13, 'role': 'IT', 'games': 'Coding', 'contacts': '078763'}"
+
+4. PUT -> Updated user 
+endpoint -> http://127.0.0.1:5000//api/update/Simon
+body:
+
+            {
+                "first_name": "Simon1",
+                "last_name": "Kimani 1",
+                "age": 13,
+                "role": "IT 1",
+                "games": "Coding 1",
+                "contacts": "078763 1"
+            }
+
+response:
+            {
+                "message": "Simon1 updated successfully!",
+                "user": {
+                    "age": 13,
+                    "contacts": "078763 1",
+                    "first_name": "Simon 1",
+                    "games": "Coding 1",
+                    "last_name": "Kimani 1",
+                    "role": "IT 1"
+                }
+            }
