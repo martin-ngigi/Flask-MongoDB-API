@@ -96,3 +96,15 @@ def update(first_name):
         "message": "{} updated successfully!".format(first_name),
         "user": data
     })
+
+
+#Delete user
+@app.route('/api/delete/<first_name>', methods=['DELETE'])
+def remove(first_name):
+    print(first_name)
+
+    users.delete_one({"first_name": first_name})
+
+    return jsonify({
+        "message": "{} deleted successfully".format(first_name)
+    })

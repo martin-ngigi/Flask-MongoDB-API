@@ -64,8 +64,9 @@
             "{'_id': ObjectId('63b548a3c8687b97249a95d6'), 'first_name': 'Simon', 'last_name': 'Kimani', 'age': 13, 'role': 'IT', 'games': 'Coding', 'contacts': '078763'}"
 
 4. PUT -> Updated user 
-endpoint -> http://127.0.0.1:5000//api/update/Simon
-body:
+- NB - Case Sensitive 
+- endpoint -> http://127.0.0.1:5000//api/update/Simon
+- body:
 
             {
                 "first_name": "Simon1",
@@ -76,7 +77,7 @@ body:
                 "contacts": "078763 1"
             }
 
-response:
+- response:
             {
                 "message": "Simon1 updated successfully!",
                 "user": {
@@ -87,4 +88,13 @@ response:
                     "last_name": "Kimani 1",
                     "role": "IT 1"
                 }
+            }
+
+5. DELETE -> delete user
+- NB - Case Sensitive 
+- endpoint -> http://127.0.0.1:5000//api/delete/Simon1
+- response -> 
+
+            {
+                "message": "Simon1 deleted successfully"
             }
